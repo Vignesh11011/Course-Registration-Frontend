@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>let data={Admin:"pass"};
+        let username1;
+        function  validate(){
+             a=data[document.getElementById("username").value];
+             b=document.getElementById("password").value;
+             username1=document.getElementById("username").value;
+                if(a==b){
+                    return true;}
+            
+                else{
+                    let y=document.getElementById("error");
+                    y.innerHTML="Please enter a valid id or password ";
+                    return false;
+                }
+        
+        
+            }</script>
+    <link rel="stylesheet" href="sst.css">
+</head>
+<body>
+          <div>  <nav>
+                <h2>Course Selection Page</h2>
+                <div class="supp">
+                <p>Support</p>
+                <p>contact</p>
+                <p>report</p>
+            </div>
+            </nav>
+            <img src="loginback.jpg" alt="login page backround" class="lgnbcimg">
+            <div id="login">
+                <h1>Admin Login</h1>
+                <div id="error"></div>
+                <form id="form21" action="index2.html"  onsubmit="return validate()">
+                    <input type="text" name="username" placeholder="Enter username" id="username" required>
+                    <input type="password" name="password" placeholder="Enter password" id="password"  required>
+                    <input type="submit" class="subm" value="submit" >
+                </form>
+            </div>
+          </div>
+</body>
+</html>

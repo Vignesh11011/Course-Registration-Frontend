@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sst2.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <h2>Course Selection Page</h2>
+            <div class="supp">
+                <p>Support</p>
+                <p>contact</p>
+                <p>report</p>
+            </div>
+        </nav>
+        <h2>Registered Courses</h2>
+        <div id="selected"></div>
+        
+        <div id="courses" style="margin-top: 100px;margin-bottom: 100px;"><h2>Availible Courses</h2></div><br>
+        <form action="payments.html" style="display: inline-flex; align-items: center;"><input type="submit" style="background-color: rgb(103, 103, 193); border-radius: 12px; position: absolute;left: 700px;" value="Pay"></form>
+    </div>
+
+    <script>
+        let count = 0;
+        let arr = ["C1", "C2", "C3", "C4", "C5"];
+        let crs = document.getElementById("courses");
+        let select=document.getElementById("selected")
+        for (let course of arr) {
+            let crsEle = document.createElement("div");
+            let crsnm = document.createTextNode(course);
+            let addButton = document.createElement("button");
+
+            addButton.addEventListener("click", () => {
+                addButton.disabled=true;
+                let optCrs=document.createElement("div");
+                let crsnm2 = document.createTextNode(course);
+            let addButton2 = document.createElement("button");
+            optCrs.appendChild(crsnm2);
+            optCrs.appendChild(addButton2);
+            addButton2.addEventListener("click",()=>{select.removeChild(optCrs); addButton.disabled=false;})
+            addButton2.innerText = "Remove";
+            addButton2.style="background-color:green;border-radius:12px;position:absolute;left:800px"
+            optCrs.style="border:1.5px solid black;width:65%;padding:3px;position:relative;left:300px;"
+            select.appendChild(optCrs)
+            });
+
+            addButton.innerText = "ADD";
+            addButton.style.backgroundColor = "green";
+            addButton.style.borderRadius = "12px";
+
+            crsEle.style.border = "1.5px solid black";
+            crsEle.style.width = "65%";
+            crsEle.style.padding = "3px";
+            crsEle.style.position = "relative";
+            crsEle.style.left = "300px";
+
+            addButton.style.position = "absolute";
+            addButton.style.left = "800px";
+
+            crsEle.appendChild(crsnm);
+            crsEle.appendChild(addButton);
+            crs.appendChild(crsEle);
+            count++;
+        }
+    </script>
+</body>
+</html>

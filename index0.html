@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sst.css">
+</head>
+<body>
+    <div>  <nav>
+        <h2>Course Selection Page</h2>
+        <div class="supp">
+        <p>Support</p>
+        <p>contact</p>
+        <p>report</p>
+    </div>
+    </nav>
+    <img src="loginback.jpg" alt="login page backround" class="lgnbcimg">
+    <div id="login">
+        <h1>Enter User Type</h1>
+        <div id="error"></div>
+        <h3>Student</h3>
+        <button id="b1">Login</button>
+        <h3>Administrator Login</h3>
+        <button id="b2">Login</button>
+    </div>
+  </div>
+    
+    <script>
+        document.getElementById("b1").addEventListener("click",function(){
+            window.location.href="index111.html";
+        });
+        document.getElementById("b2").addEventListener("click",function(){
+            window.location.href="indexAdmin.html";
+        });
+    </script>
+</body>
+</html>
+

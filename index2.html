@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script >
+    let count=0
+
+    function courseAdd(){
+        let crsEle=document.createElement("div");
+        let crs=document.getElementById("courses");
+        let inp=document.getElementById("crsName").value;
+        let crsnm=document.createTextNode(inp);
+        let rmov=document.createElement("button");
+        let crsitem=document.getElementById("courses").childNodes;
+        rmov.addEventListener("click",()=>{crs.removeChild(crsEle)});
+        rmov.setAttribute("key",count);
+        rmov.innerText="Remove";
+        crsEle.style.border="1.5px solid black";
+        crsEle.style.width="65%";
+        crsEle.style.padding="3px";
+        crsEle.style.position="relative";
+        crsEle.style.left="300px";
+        rmov.style.backgroundColor="red";
+        rmov.style.borderRadius="12px";
+        rmov.style.position="absolute";
+        rmov.style.left="800px";
+
+        crsEle.append(crsnm);
+        crsEle.append(rmov);
+        crs.appendChild(crsEle);
+        count++;
+        return false;
+    }</script>
+    <link rel="stylesheet" href="sst2.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <h2>Course Selection Page(Admin)</h2>
+            <div class="supp">
+            <a href="regs.html" style="text-decoration: none;">Registrations</a>
+            <p>Support</p>
+            <p>contact</p>
+            <p>report</p>
+        </div>
+        </nav>
+        <div id="courses"></div><br>
+        <span><form action="#" onsubmit="return courseAdd()"><input type="text" id="crsName" required>
+                 <button type="submit"  style="background-color: rgb(12, 232, 12); border-radius: 5px ;">ADD</button></span></form>
+
+
+        </div>
+        
+</body>
+</html>

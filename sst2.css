@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding:0x;
+}
+nav{
+    height:3rem;
+    width:100%;
+    background-color: aquamarine;
+    display:flex ;
+    align-items: center;
+
+}
+.supp{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left:850px;
+    width: 25%;
+    cursor: pointer;
+}
+
+.supp :hover{
+    color:red;
+    text-decoration: underline;
+}
+
+.remove{
+   float:right;
+    background-color:rgb(233, 0, 0);
+    border-radius: 20px;
+    cursor:pointer;
+    position:absolute;
+    Left: 1100px;
+  }
+  
+  span{
+    display:inline flex;
+    position: relative;
+    left:40%;
+  }
